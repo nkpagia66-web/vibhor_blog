@@ -103,10 +103,10 @@ export const projects: Project[] = [
   },
   {
     slug: 'kashtnivaran-balaji-mandir-foundation',
-    name: 'Kashtnivaran Balaji / Ajmandir Foundation',
+    name: 'Kast Nivaran Balaji Mandir Foundation',
     category: 'Websites',
     description:
-      'Website for the Kashtnivaran Balaji Mandir / Ajmandir Foundation, presenting the foundation’s work and giving visitors a clear way to reach out.',
+      'Website for the Kast Nivaran Balaji Mandir Foundation, presenting the foundation’s work and giving visitors a clear way to reach out.',
     technologies: [],
     features: [
       'Foundation information pages',
