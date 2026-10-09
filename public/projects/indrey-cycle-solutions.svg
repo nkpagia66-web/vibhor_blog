@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" role="img" aria-label="Indrey Cycle Solutions project preview placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#eef2ff"/>
+      <stop offset="100%" stop-color="#fafaf9"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#4f46e5" stroke-opacity="0.08" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <rect width="800" height="500" fill="url(#grid)"/>
+  <text x="400" y="270" font-family="Arial, Helvetica, sans-serif" font-size="86" font-weight="700" fill="#4f46e5" fill-opacity="0.75" text-anchor="middle">IC</text>
+  <text x="400" y="330" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#52525b" text-anchor="middle">Screenshot coming soon</text>
+</svg>

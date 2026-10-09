@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --------------------------------- tokens --------------------------------- */
+:root {
+  --background: 250 250 249;
+  --foreground: 24 24 27;
+  --muted: 244 244 245;
+  --muted-foreground: 113 113 122;
+  --card: 255 255 255;
+  --card-foreground: 24 24 27;
+  --border: 228 228 231;
+  --accent: 79 70 229;
+  --accent-foreground: 255 255 255;
+  --accent-soft: 238 242 255;
+  --ring: 99 102 241;
+  --success: 22 163 74;
+  --warning: 202 138 4;
+  --danger: 220 38 38;
+}
+
+.dark {
+  --background: 13 13 16;
+  --foreground: 244 244 245;
+  --muted: 39 39 45;
+  --muted-foreground: 161 161 170;
+  --card: 24 24 28;
+  --card-foreground: 244 244 245;
+  --border: 51 51 58;
+  --accent: 129 140 248;
+  --accent-foreground: 13 13 16;
+  --accent-soft: 30 30 56;
+  --ring: 129 140 248;
+  --success: 74 222 128;
+  --warning: 250 204 21;
+  --danger: 248 113 113;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    @apply bg-accent/20 text-foreground;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+}
+
+@layer components {
+  .container-site {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .card {
+    @apply rounded-2xl border border-border bg-card shadow-soft;
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.18em] text-accent;
+  }
+
+  .prose-site {
+    @apply text-base leading-7 text-foreground/90;
+  }
+  .prose-site h1 {
+    @apply mb-6 font-display text-3xl font-bold tracking-tight sm:text-4xl;
+  }
+  .prose-site h2 {
+    @apply mb-4 mt-10 font-display text-2xl font-bold tracking-tight sm:text-3xl;
+  }
+  .prose-site h3 {
+    @apply mb-3 mt-8 font-display text-xl font-semibold sm:text-2xl;
+  }
+  .prose-site h4 {
+    @apply mb-2 mt-6 text-lg font-semibold;
+  }
+  .prose-site p {
+    @apply mb-5;
+  }
+  .prose-site ul {
+    @apply mb-5 list-disc space-y-2 pl-6;
+  }
+  .prose-site ol {
+    @apply mb-5 list-decimal space-y-2 pl-6;
+  }
+  .prose-site blockquote {
+    @apply mb-5 border-l-4 border-accent/50 bg-muted/60 px-5 py-4 italic text-foreground/80;
+  }
+  .prose-site a {
+    @apply font-medium text-accent underline underline-offset-4 hover:opacity-80;
+  }
+  .prose-site code {
+    @apply rounded bg-muted px-1.5 py-0.5 font-mono text-[0.9em];
+  }
+  .prose-site pre code {
+    @apply bg-transparent p-0 text-zinc-100;
+  }
+  .prose-site hr {
+    @apply my-8 border-border;
+  }
+}
+
+/* subtle grid backdrop used in the hero */
+.bg-grid {
+  background-image: linear-gradient(to right, rgb(var(--border) / 0.6) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(var(--border) / 0.6) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 75% 60% at 50% 0%, black 40%, transparent 100%);
+}
