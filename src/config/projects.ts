@@ -60,7 +60,7 @@ export const projects: Project[] = [
       'Search and category browsing',
       'Seller and buyer accounts',
     ],
-    image: '/projects/geteverygoods.svg',
+    image: '/projects/geteverygoods.png',
     liveUrl: 'https://geteverygoods.com',
     caseStudy: {
       challenge:
@@ -88,7 +88,7 @@ export const projects: Project[] = [
       'Responsive, mobile-first layout',
       'Fast static page delivery',
     ],
-    image: '/projects/anant-innovations.svg',
+    image: '/projects/anant-innovations.png',
     liveUrl: 'https://anantinnovations.online',
     caseStudy: {
       challenge:
